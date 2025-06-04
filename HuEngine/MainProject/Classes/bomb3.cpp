@@ -2,11 +2,11 @@
 // bomb.cpp
 //
 
-#include "bomb.h"
+#include "bomb3.h"
 
 using namespace HE;
 
-Math::Rectangle Bomb::GetCollision()
+Math::Rectangle Bomb3::GetCollision()
 {
 	Math::Rectangle collision;
 	collision.x = (long)sprite_.params.pos.x;
@@ -24,22 +24,18 @@ Math::Rectangle Bomb::GetCollision()
 	return collision;
 }
 
-void Bomb::Load()
+void Bomb3::Load()
 {
 
 	sprite_ = Sprite("bomb.png");
-	//RenderingPath->AddSprite(&sprite_, -50);
-
-
-	//RenderingPath->AddSprite(&collision_sprite_, 1);
-
-}
-void Bomb::AddScene()
-{
 	RenderingPath->AddSprite(&sprite_, -50);
+
+
+	RenderingPath->AddSprite(&collision_sprite_, 1);
+
 }
 
-void Bomb::Initialize(Math::Vector2 initial, float drop_speed)
+void Bomb3::Initialize(Math::Vector2 initial)
 {
 
 	sprite_.params.siz = Math::Vector2(50.0f, 50.0f);
@@ -51,21 +47,19 @@ void Bomb::Initialize(Math::Vector2 initial, float drop_speed)
 	collision_sprite_.params.color = Color(0, 255, 0);
 	collision_sprite_.params.opacity = 0.0f;
 
-	drop_speed_ = drop_speed;
 }
 
-void Bomb::Update()
+void Bomb3::Update()
 {
 
-	sprite_.params.pos.y += (100.0f + drop_speed_) * Time.deltaTime;
+	sprite_.params.pos.y += 900.0f * Time.deltaTime;
 	if (sprite_.params.pos.y >= 1280.0f) {
-		sprite_.params.pos.y = Random::GetRandom(-240.0f, -120.0f);
+		sprite_.params.pos.y = -120.0f;
 		sprite_.params.pos.x = Random::GetRandom(0.0f, 1380.0f - sprite_.params.pos.x);
-		drop_speed_ = Random::GetRandom(0.0f, 500.0f);
 	}
 }
 
-void Bomb::OnCollision()
+void Bomb3::OnCollision()
 {
 
 }

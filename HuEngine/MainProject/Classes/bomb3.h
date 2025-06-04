@@ -4,19 +4,17 @@
 #include "../HuEngine.h"
 
 
-class Bomb {
+class Bomb3 {
 public:
 
 	void Load();
-	void Initialize(HE::Math::Vector2 initial, float drop_speed);
+	void Initialize(HE::Math::Vector2 initial);
 	void Update();
 	void OnCollision();
 	HE::Math::Rectangle GetCollision();
 
-	void AddScene();
-
 private:
 	HE::Sprite sprite_;
 	HE::Sprite collision_sprite_;
-	float drop_speed_;
+
 };

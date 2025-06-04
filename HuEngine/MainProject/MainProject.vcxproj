@@ -108,6 +108,8 @@
     <ClInclude Include="Classes\BG.h" />
     <ClInclude Include="Classes\bomb.h" />
     <ClInclude Include="Classes\bomb2.h" />
+    <ClInclude Include="Classes\bomb3.h" />
+    <ClInclude Include="Classes\Enemytimer.h" />
     <ClInclude Include="Classes\player.h" />
     <ClInclude Include="HEToolKit\cppcoro\cppcoro.h" />
     <ClInclude Include="HEToolKit\DirectXTK\Bezier.h" />
@@ -132,6 +134,8 @@
     <ClCompile Include="Classes\BG.cpp" />
     <ClCompile Include="Classes\bomb.cpp" />
     <ClCompile Include="Classes\bomb2.cpp" />
+    <ClCompile Include="Classes\bomb3.cpp" />
+    <ClCompile Include="Classes\Enemytimer.cpp" />
     <ClCompile Include="Classes\player.cpp" />
     <ClCompile Include="HEToolKit\DirectXTK\Keyboard.cpp" />
     <ClCompile Include="HEToolKit\DirectXTK\Mouse.cpp" />
