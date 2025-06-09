@@ -20,6 +20,8 @@ void Player::Initialize()
 
 	sprite_.params.pos = Math::Vector2(600.0f, 675.0f);
 
+	  
+
 
 }
 
