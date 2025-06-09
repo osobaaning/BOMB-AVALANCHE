@@ -109,7 +109,6 @@
     <ClInclude Include="Classes\bomb.h" />
     <ClInclude Include="Classes\bomb2.h" />
     <ClInclude Include="Classes\bomb3.h" />
-    <ClInclude Include="Classes\Enemytimer.h" />
     <ClInclude Include="Classes\player.h" />
     <ClInclude Include="HEToolKit\cppcoro\cppcoro.h" />
     <ClInclude Include="HEToolKit\DirectXTK\Bezier.h" />
@@ -126,7 +125,9 @@
     <ClInclude Include="Resources\resource.h" />
     <ClInclude Include="SceneManagement.h" />
     <ClInclude Include="Scenes\DontDestroyOnLoad.h" />
+    <ClInclude Include="Scenes\Gameover.h" />
     <ClInclude Include="Scenes\MainScene.h" />
+    <ClInclude Include="Scenes\TitleScene.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
@@ -135,7 +136,6 @@
     <ClCompile Include="Classes\bomb.cpp" />
     <ClCompile Include="Classes\bomb2.cpp" />
     <ClCompile Include="Classes\bomb3.cpp" />
-    <ClCompile Include="Classes\Enemytimer.cpp" />
     <ClCompile Include="Classes\player.cpp" />
     <ClCompile Include="HEToolKit\DirectXTK\Keyboard.cpp" />
     <ClCompile Include="HEToolKit\DirectXTK\Mouse.cpp" />
@@ -151,7 +151,9 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Use</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Use</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="Scenes\Gameover.cpp" />
     <ClCompile Include="Scenes\MainScene.cpp" />
+    <ClCompile Include="Scenes\TitleScene.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>

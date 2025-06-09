@@ -97,7 +97,10 @@
     <ClInclude Include="Classes\bomb3.h">
       <Filter>Scenes</Filter>
     </ClInclude>
-    <ClInclude Include="Classes\Enemytimer.h">
+    <ClInclude Include="Scenes\Gameover.h">
+      <Filter>Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="Scenes\TitleScene.h">
       <Filter>Scenes</Filter>
     </ClInclude>
   </ItemGroup>
@@ -147,7 +150,10 @@
     <ClCompile Include="Classes\bomb3.cpp">
       <Filter>Scenes</Filter>
     </ClCompile>
-    <ClCompile Include="Classes\Enemytimer.cpp">
+    <ClCompile Include="Scenes\Gameover.cpp">
+      <Filter>Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="Scenes\TitleScene.cpp">
       <Filter>Scenes</Filter>
     </ClCompile>
   </ItemGroup>

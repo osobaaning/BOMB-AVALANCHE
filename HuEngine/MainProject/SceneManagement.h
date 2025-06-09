@@ -4,8 +4,10 @@
 #include <memory>
 
 enum class NextScene : int {
+	TitleScene,
+	GameoverScene,
 	MainScene,
-	StartScene = MainScene
+	StartScene = TitleScene
 };
 
 class SceneManagement : public HE::Application
