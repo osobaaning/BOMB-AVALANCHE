@@ -12,7 +12,8 @@ public:
 	void Update();
 	void OnCollision();
 	HE::Math::Rectangle GetCollision();
-
+	void SetInitialPosition();
+	HE::Math::Vector3 GetPosition() const { return sprite_.params.pos; };
 	void AddScene();
 
 private:

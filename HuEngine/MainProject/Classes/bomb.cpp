@@ -48,6 +48,8 @@ void Bomb::Initialize(Math::Vector2 initial, float drop_speed)
 		0, 0, sprite_.params.siz.x, sprite_.params.siz.y
 	));
 
+	SetInitialPosition();
+
 	collision_sprite_.params.color = Color(0, 255, 0);
 	collision_sprite_.params.opacity = 0.0f;
 
@@ -56,16 +58,33 @@ void Bomb::Initialize(Math::Vector2 initial, float drop_speed)
 
 void Bomb::Update()
 {
-
 	sprite_.params.pos.y += (100.0f + drop_speed_) * Time.deltaTime;
-	if (sprite_.params.pos.y >= 1280.0f) {
-		sprite_.params.pos.y = Random::GetRandom(-240.0f, -120.0f);
-		sprite_.params.pos.x = Random::GetRandom(0.0f, 1380.0f - sprite_.params.pos.x);
-		drop_speed_ = Random::GetRandom(0.0f, 500.0f);
-	}
+
 }
 
 void Bomb::OnCollision()
 {
+
+}
+
+
+
+void Bomb::SetInitialPosition()
+{
+	const int osobaaning = Random::GetRandom(0, 2);
+	switch (osobaaning)
+	{
+	case 0:
+		sprite_.params.pos.y = Random::GetRandom(-240.0f, -120.0f);
+		sprite_.params.pos.x = Random::GetRandom(0.0f, 615.0f - sprite_.params.pos.x);
+		drop_speed_ = Random::GetRandom(0.0f, 500.0f);
+		break;
+	case 1:
+	case 2:
+		sprite_.params.pos.y = Random::GetRandom(-240.0f, -120.0f);
+		sprite_.params.pos.x = Random::GetRandom(665.0f, 1280.0f - sprite_.params.pos.x);
+		drop_speed_ = Random::GetRandom(0.0f, 500.0f);
+		break;
+	}
 
 }
