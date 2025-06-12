@@ -75,16 +75,12 @@ void Bomb::SetInitialPosition()
 	switch (osobaaning)
 	{
 	case 0:
-		sprite_.params.pos.y = Random::GetRandom(-240.0f, -120.0f);
-		sprite_.params.pos.x = Random::GetRandom(0.0f, 615.0f - sprite_.params.pos.x);
-		drop_speed_ = Random::GetRandom(0.0f, 500.0f);
+		sprite_.params.pos.x = Random::GetRandom(0.0f, 615.0f - sprite_.params.siz.x);
 		break;
 	case 1:
-	case 2:
-		sprite_.params.pos.y = Random::GetRandom(-240.0f, -120.0f);
-		sprite_.params.pos.x = Random::GetRandom(665.0f, 1280.0f - sprite_.params.pos.x);
-		drop_speed_ = Random::GetRandom(0.0f, 500.0f);
+		sprite_.params.pos.x = Random::GetRandom(615.0f, 1280.0f - sprite_.params.siz.x);
 		break;
 	}
-
+	sprite_.params.pos.y = Random::GetRandom(-240.0f, -120.0f);
+	drop_speed_ = Random::GetRandom(0.0f, 500.0f);
 }
