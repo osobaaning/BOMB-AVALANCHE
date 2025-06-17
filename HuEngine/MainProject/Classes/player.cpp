@@ -20,7 +20,7 @@ void Player::Initialize()
 
 	sprite_.params.pos = Math::Vector2(600.0f, 675.0f);
 
-	  
+
 
 
 }
@@ -44,6 +44,7 @@ void Player::Update()
 	const float RIGHT_LIMIT = RenderingPath->GetLogicalWidth() - sprite_.params.siz.x;
 
 	sprite_.params.pos.x = std::clamp(sprite_.params.pos.x, 0.0f, RIGHT_LIMIT);
+
 		}
 Math::Rectangle Player::GetCollision()
 {
